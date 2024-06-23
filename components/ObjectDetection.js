@@ -40,8 +40,6 @@ const ObjectDetection = () => {
         0.6,
       );
 
-      //   console.log(detectedObjects);
-
       const context = canvasRef.current.getContext("2d");
       renderPredictions(detectedObjects, context);
     }
@@ -63,6 +61,11 @@ const ObjectDetection = () => {
   useEffect(() => {
     runCoco();
     showmyVideo();
+
+    // Clean up on unmount
+    return () => {
+      clearInterval(detectInterval);
+    };
   }, []);
 
   return (
@@ -82,6 +85,10 @@ const ObjectDetection = () => {
             ref={canvasRef}
             className="absolute top-0 left-0 z-99999 w-full lg:h-[720px]"
           />
+          {/* footer */}
+          <div className="absolute bottom-2 left-2 text-white opacity-80">
+            Created by Dhanushwaran A J
+          </div>
         </div>
       )}
     </div>
