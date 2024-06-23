@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real-Time Object Detection with TensorFlow.js
 
-## Getting Started
+This project showcases a real-time object detection application using TensorFlow.js, Next.js 14, and Tailwind CSS. The application utilizes the COCO-SSD model for detecting objects in a live webcam feed.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Resources](#resources)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This application demonstrates the power of machine learning in the browser. It captures live video from the webcam and uses the COCO-SSD model to detect and identify objects in real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Real-time object detection using TensorFlow.js and COCO-SSD
+- Live video capture with `react-webcam`
+- Dynamic rendering of detected objects with bounding boxes and labels
+- Styled with Tailwind CSS for a sleek and modern interface
+- Loading indicator during model initialization
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js 14](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [TensorFlow.js](https://www.tensorflow.org/js)
+- [COCO-SSD Model](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Webcam](https://www.npmjs.com/package/react-webcam)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+1. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Run the development server:**
+
+   ```bash
+   npm run dev
+
+
+1. **Open your browser and navigate to:**
+
+   ```bash
+   http://localhost:3000
+
+## Usage
+
+Once the application is running, it will automatically access your webcam and start detecting objects in real-time. Detected objects will be highlighted with bounding boxes and labels.
+
+## Resources
+
+- [MDN Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+- [COCO-SSD Model](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd)
+- [React Webcam](https://www.npmjs.com/package/react-webcam)
